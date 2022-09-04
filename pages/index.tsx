@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
+import Link from 'next/link';
 import { useEffect } from 'react'
 import styles from '../styles/index.module.css'
 
@@ -51,19 +52,23 @@ const HomePage: NextPage = () => {
     <>
       <main className={styles.main}>
         <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
-          <div id="profile" className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-3xl bg-white opacity-75 mx-6 lg:mx-0">
+          <div id="profile" className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-3xl bg-white opacity-80 mx-6 lg:mx-0">
             <div className="p-4 md:p-12 text-center lg:text-left">
               <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style={{
                 backgroundImage: `url('https://avatars.githubusercontent.com/u/745929?v=4')`
               }}></div>
 
-              <h1 className="text-3xl font-bold pt-8 lg:pt-0">Encore S.</h1>
+              <h1 className="flex justify-between text-3xl font-bold">
+                Encore S.
+
+                <button className="js-change-theme focus:outline-none text-right-0" onClick={toggleMode}>🌙</button>
+              </h1>
               <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
               <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
                 <svg className="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"/>
                 </svg>
-                Lead Software Engineer
+                Lead Software Engineer | Researcher
               </p>
               <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
                 <svg className="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -71,16 +76,11 @@ const HomePage: NextPage = () => {
                 </svg>
                 Shanghai, China
               </p>
-              <p className="pt-2 text-sm">
-                I BUILD AWESOME WEB APPS AND TOOLS.
+              <p className="pt-2 text-md text-gray">
+                Explore new technologies and develop software solutions and quick hacks.
               </p>
 
-              <div className="pt-2 pb-2">
-                <button
-                  className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full"
-                >
-                  Get In Touch
-                </button>
+              <div className="pt-6 pb-4">
               </div>
 
               <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
@@ -129,9 +129,6 @@ const HomePage: NextPage = () => {
               src="https://avatars.githubusercontent.com/u/745929?v=4"
               className="object-cover rounded-none lg:rounded-lg lg:rounded-l-none shadow-3xl hidden lg:block"
             ></img>
-          </div>
-            <div className="absolute top-0 right-0 h-12 w-18 p-4">
-            <button className="js-change-theme focus:outline-none" onClick={toggleMode}>🌙</button>
           </div>
         </div>
       </main>

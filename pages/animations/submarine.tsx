@@ -1,8 +1,18 @@
+import { createGlobalStyle } from 'styled-components'
 import styles from '../../styles/animations/submarine.module.scss';
+
+const NavAbsoluteCSS = createGlobalStyle`
+  nav {
+	  z-index: 2;
+	  position: absolute;
+    width: 100%;
+  }
+`
 
 const Submarine = () => {
   return (
     <div className={styles.main}>
+      <NavAbsoluteCSS />
       <div className={styles.seaContainer}>
         <div className={styles.submarineContainer}>
           <div className={styles.light}></div>
