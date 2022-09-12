@@ -1,0 +1,71 @@
+// === Variables =====
+$perspective:     60rem;
+$font-size:       4.25rem;
+$split-position:  49%;
+$split-thickness: 4px;
+$split-color:     #FF2C75;
+
+// === menu <ul> =====
+.menuList {
+  font-size: $font-size;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateX(-10deg) rotateY(20deg); // overwritten by JS
+}
+
+// === menu item =====
+.menuListItem {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+
+  // === Split Line =====
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $split-position;
+    left: -10%;
+    right: -10%;
+    height: $split-thickness;
+    border-radius: $split-thickness;
+    margin-top: -($split-thickness / 2);
+    background: $split-color;
+    transform: scale(0);
+    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    z-index: 1;
+  }
+}
+
+// === Top/bottom mask =====
+.mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: $split-color;
+  top: 0;
+  height: $split-position;
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+
+  span { display: block; }
+}
+
+// === Bottom mask specific =====
+.mask + .mask {
+  top: $split-position - 0.1;
+  height: 100 - $split-position + 0.1;
+
+  span { transform: translateY(-$split-position); }
+}
+
+// === Where the fun stuff happens =====
+.menuListItem:hover,
+.menuListItem:active {
+  .mask { color: #FFF; transform: skewX(12deg) translateX(5px); }
+  .mask + .mask { transform: skewX(12deg) translateX(-5px); }
+  &::before { transform: scale(1); }
+}
