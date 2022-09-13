@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/no-unknown-property */
 
 import Link from "next/link"
@@ -8,7 +9,7 @@ const Header = () => {
     <>
       <nav className="flex items-center justify-between flex-wrap bg-teal-800 p-3">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img src="https://avatars.githubusercontent.com/u/745929?v=4" className="mr-3 h-5 sm:h-8 rounded" alt="Encore S."></img>
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Encore S.</span>
           </a>
@@ -31,7 +32,7 @@ const Header = () => {
               {
                 [
                   'coffee-machine', 'submarine', 'lighthouse', 'waves', 'split-menu',
-                  'block-revealing-effect'
+                  'block-revealing-effect', 'folding-panorama'
                 ].map((name) => (
                   <li key={name}>
                     <Link

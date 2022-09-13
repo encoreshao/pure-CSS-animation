@@ -1,0 +1,58 @@
+$size: 95vw;
+$folds: 5;
+
+$skew: 15deg;
+$crunch: 0.6;
+$duration: 4s;
+$delay: 1s;
+
+// $url: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Pittsburgh_Panorama_from_the_Duquesne_Incline.jpg/1280px-Pittsburgh_Panorama_from_the_Duquesne_Incline.jpg);
+$url: url(https://images.unsplash.com/photo-1499006619764-59e5b0c0e7ca?auto=format&fit=crop);
+
+.card {
+	display: flex;
+	width: $size;
+	height: 304/1280 * $size;
+}
+
+.fold {
+	flex: 1;
+	background: $url;
+	background-size: cover;
+
+	@for $i from 1 through $folds {
+		&:nth-child(#{$i}) {
+			background-position: ($i - 1) / ($folds - 1) * 100%;
+		}
+	}
+
+	&:first-child {
+		border-radius: 2vw 0 0 2vw;
+	}
+	&:last-child {
+		border-radius: 0 2vw 2vw 0;
+	}
+
+	animation: $duration $delay ease-in-out infinite;
+
+	&:nth-child(odd) {
+		animation-name: odd-fold;
+
+		@keyframes odd-fold {
+			50% {
+				transform: skewY($skew);
+				filter: brightness(1.25);
+			}
+		}
+	}
+	&:nth-child(even) {
+		animation-name: even-fold;
+
+		@keyframes even-fold {
+			50% {
+				transform: skewY(-$skew);
+				filter: brightness(0.75);
+			}
+		}
+	}
+}
