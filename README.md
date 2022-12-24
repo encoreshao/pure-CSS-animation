@@ -11,3 +11,5 @@ Profile Card - Tailwind CSS & React
 1. [Simple Menu](https://encoreshao.github.io/profile-card-react/animations/split-menu)
 1. [Block Revealing](https://encoreshao.github.io/profile-card-react/animations/block-revealing-effect)
 1. [Folding Panorama](https://encoreshao.github.io/profile-card-react/animations/folding-panorama)
+1. [Box Loading](https://encoreshao.github.io/profile-card-react/animations/box-loading)
+1. [Fade Tags](https://encoreshao.github.io/profile-card-react/animations/fade-tags)

@@ -41,12 +41,16 @@ const CustomBackgroundCss = createGlobalStyle`
 
 const BlockRevealingEffect = () => {
   return (
-    <div className={styles.blockRevealingEffect}>
+    <div>
       <CustomBackgroundCss />
-      <h1 id="blockEffect" className={styles.blockEffect}>
-        <div id="blockReveal1" className={styles.blockReveal}>Encore S.</div>
-        <div id="blockReveal2" className={styles.blockReveal}>Software Engineer</div>
-      </h1>
+      <div
+        className="h-screen flex items-center justify-center"
+      >
+        <h1 id="blockEffect" className={styles.blockEffect}>
+          <div id="blockReveal1" className={styles.blockReveal}>Encore S.</div>
+          <div id="blockReveal2" className={styles.blockReveal}>Software Engineer</div>
+        </h1>
+      </div>
     </div>
   )
 }
