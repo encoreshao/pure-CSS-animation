@@ -4,16 +4,16 @@ import Link from "next/link"
 
 const Index = () => {
   return (
-    <div
+    <ul
       className="flex flex-col items-center justify-center space-y-2 h-screen"
     >
       {
         [
           'coffee-machine', 'submarine', 'lighthouse', 'waves', 'split-menu',
           'block-revealing-effect', 'folding-panorama', 'simple-loading', 'box-loading',
-          'colour-keyboard', 'fade-tags'
+          'colour-keyboard', 'fade-tags', 'blooming-flowers', 'motion-blur'
         ].map((name) => (
-          <div key={name}
+          <li key={name}
             className="cursor-pointer"
           >
             <Link
@@ -25,10 +25,10 @@ const Index = () => {
                 </span>
               </div>
             </Link>
-          </div>
+          </li>
         ))
       }
-    </div>
+    </ul>
   )
 }
 

@@ -1,6 +1,6 @@
-## Profile
+## Personal Profile
 
-Profile Card - Tailwind CSS & React
+Personal Profile Card - Tailwind CSS & React
 
 ## CSS Animations (Pure CSS)
 
@@ -13,3 +13,5 @@ Profile Card - Tailwind CSS & React
 1. [Folding Panorama](https://encoreshao.github.io/profile-card-react/animations/folding-panorama)
 1. [Box Loading](https://encoreshao.github.io/profile-card-react/animations/box-loading)
 1. [Fade Tags](https://encoreshao.github.io/profile-card-react/animations/fade-tags)
+1. [Blooming Flowers](https://encoreshao.github.io/profile-card-react/animations/blooming-flowers)
+1. [Motion Blur](https://encoreshao.github.io/profile-card-react/animations/motion-blur)
